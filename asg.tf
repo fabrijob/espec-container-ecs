@@ -35,7 +35,7 @@ resource "aws_ecs_capacity_provider" "on_demand" {
   auto_scaling_group_provider {
     auto_scaling_group_arn = aws_autoscaling_group.on_demand.arn
     managed_scaling {
-      maximum_scaling_step_size = 10
+      maximum_scaling_step_size = 3
       minimum_scaling_step_size = 1
       status                    = "ENABLED"
       target_capacity           = 90
